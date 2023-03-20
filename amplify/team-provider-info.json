@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-frogwelldemo-dev-173015-authRole",
+      "UnauthRoleArn": "arn:aws:iam::965895616984:role/amplify-frogwelldemo-dev-173015-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::965895616984:role/amplify-frogwelldemo-dev-173015-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-frogwelldemo-dev-173015-deployment",
+      "UnauthRoleName": "amplify-frogwelldemo-dev-173015-unauthRole",
+      "StackName": "amplify-frogwelldemo-dev-173015",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:965895616984:stack/amplify-frogwelldemo-dev-173015/e0df2f60-c744-11ed-b6d3-068c689e532b",
+      "AmplifyAppId": "d1o9w0hperuuvw"
+    }
+  }
+}
