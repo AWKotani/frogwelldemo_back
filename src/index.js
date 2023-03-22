@@ -12,7 +12,7 @@ Amplify.configure(config)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 liff
-  .init({liffId:process.env.VITE_LIFF_ID || '' })
+  .init({liffId:confgData.VITE_LIFF_ID || '' })
   .then(() => {
 root.render(
   <React.StrictMode>
