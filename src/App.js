@@ -1,51 +1,41 @@
-import liff from '@line/liff';
-import React, {getUserInfo, useEffect} from 'react';
-import ReactDOM from 'react-dom';
-import confgData from './.env';
+import { Mainpage } from './pages/main';
+import React, { createContext } from "react"
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import liff from '@line/liff/dist/lib';
+import './main.css';
+import LoginPage from './pages/loginpage';
+export const Lineobject = createContext();
 
-function LiffPage() {
+function App() {
 
-    useEffect(()=>{
-        initLiff()// 初期化処理
-    }, [])
+  const [lineobj, setlineobj] = useState({});
+  const linevalue = { lineobj, setlineobj };
+  /*******EVENT****** */
 
-    /**
-     * LIFFの初期化を行う
-     * 初期化完了. 以降はLIFF SDKの各種機能を利用できる
-     *  =>初期化前でも使用できる機能もある（liff.isInClient()など）
-     */
-    const initLiff = () => {
-        liff.init({ liffId: confgData.LIFF_ID})
-            .then(()=>{ 
-                //ログインしていなければログインさせる
-                if(liff.isLoggedIn() === false) liff.login({})
-            }).catch( (error)=> {});
+  useEffect(() => {
+    if (liff.isLoggedIn()) {
+      console.log(liff.isLoggedIn())
     }
+  }, [])
 
-    /**
-     * LINEで保持しているユーザー情報取得
-     */
-    const getUserInfo = () => {
-        liff.getProfile().then(profile => {
-            alert( JSON.stringify(profile) );
-        }).catch((error)=>{})
-    }
-
+  if (liff.isLoggedIn()){
     return (
-        <>
-            {/* LIFF内以外からアクセス */}
-            {liff.isInClient() === false ?
-                <p>ブラウザからはお使いいただけません。LINE内アプリ（LIFF）からご利用ください。</p>
-            :
-                <p>こんにちは</p>
+      <Lineobject.Provider value={linevalue}>
+        <Router>
+          <div>
+            {
+                <Routes>
+                  <Route path="/" element={<Mainpage />} />
+                </Routes>
             }
-        </>
+          </div>
+          </Router>
+      </Lineobject.Provider>
     );
+  }
+  else{
+    return(<LoginPage/>)
+  }
 }
-export default LiffPage;
-
-if (document.getElementById('LiffContent')) {
-    ReactDOM.render(
-        document.getElementById('MachineContent')
-    );
-}
+export default App;
