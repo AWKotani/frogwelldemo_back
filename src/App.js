@@ -1,5 +1,5 @@
 import liff from '@line/liff';
-import React, {useEffect} from 'react';
+import React, {getUserInfo, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import confgData from './.env';
 
