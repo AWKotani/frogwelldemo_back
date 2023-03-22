@@ -14,9 +14,10 @@ function App() {
   /*******EVENT****** */
 
   useEffect(() => {
+      liff.ready.then(() => {
     if (liff.isLoggedIn()) {
       console.log(liff.isLoggedIn())
-    }
+    }})
   }, [])
 
   if (liff.isLoggedIn()){
