@@ -2,17 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import liff from '@line/liff'
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Amplify } from 'aws-amplify'
 import config from "./aws-exports";
-import confgData from './.env';
 Amplify.configure(config)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 liff
-  .init({liffId:process.env.REACT_APP_VITE_APP_LIFF_ID || '' })
+  .init({liffId: process.env.REACT_APP_VITE_APP_LIFF_ID })
   .then(() => {
 root.render(
   <React.StrictMode>
