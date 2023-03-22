@@ -10,6 +10,11 @@
       "StackName": "amplify-frogwelldemo-dev-173015",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:965895616984:stack/amplify-frogwelldemo-dev-173015/e0df2f60-c744-11ed-b6d3-068c689e532b",
       "AmplifyAppId": "d1o9w0hperuuvw"
+    },
+    "categories": {
+      "api": {
+        "frogwelldemo": {}
+      }
     }
   }
 }
