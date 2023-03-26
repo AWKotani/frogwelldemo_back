@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import liff from '@line/liff/dist/lib';
 
 export const Mainpage = (() => {
-
   const [Userprofile , setUserprofile] = useState("");
-
-
   const Getuser = (async()=>{
     let user = await liff.getProfile()
     console.log(user)
@@ -15,7 +12,7 @@ export const Mainpage = (() => {
 
   return (
     <div>
-      ログインしました
+      Login User Information
       <button onClick={Getuser}>button</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
@@ -23,5 +20,3 @@ export const Mainpage = (() => {
     </div>
   );
 });
-
-//<p>{Userprofile.userId}</p>
