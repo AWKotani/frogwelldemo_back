@@ -10,8 +10,8 @@ export const Mainpage = (() => {
     console.log(user);
     setUserprofile(user);
   });
-  const recs = '';
-  (async () => {
+//  const recs = '';
+//  (async () => {
     const conn = new jsforce.Connection({
       oauth2 : {
         loginUrl: 'https://test.salesforce.com',
@@ -20,20 +20,22 @@ export const Mainpage = (() => {
         redirectUri: 'https://frogwell--techskill.sandbox.my.salesforce.com/oauth2/callback&response_type=code'
       }
     });
-    await conn.login('api.user@frogwell.co.jp.techskill', 'frogwell20236h9WlVSOU9UDbhl5lt0CcBv3', function(err, userInfo) {
+//    await conn.login('api.user@frogwell.co.jp.techskill', 'frogwell20236h9WlVSOU9UDbhl5lt0CcBv3', function(err, userInfo) {
+    conn.login('api.user@frogwell.co.jp.techskill', 'frogwell20236h9WlVSOU9UDbhl5lt0CcBv3', function(err, userInfo) {
       if (err) { return console.error(err); }
     });
-    recs = await conn.sobject('LINE_User__c').find({
+    //recs = await conn.sobject('LINE_User__c').find({
+    const recs = conn.sobject('LINE_User__c').find({
       LineUserId__c: 'U75bcd602fbd7da18d3974ac788bc7f00'
     });
-  });
+//  });
 
   return (
     <div>
       <button type="primary" onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
-      <p>SalesforceId:{recs.Id}</p>
+      <p>displayName:{recs.Id}</p>
     </div>
   );
 });
