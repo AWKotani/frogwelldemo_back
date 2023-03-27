@@ -35,7 +35,6 @@ export const Mainpage = (() => {
       <button type="primary" onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
-      <p>displayName:{recs.Id}</p>
     </div>
   );
 });
