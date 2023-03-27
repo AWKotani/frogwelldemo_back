@@ -32,7 +32,7 @@ export const Mainpage = (() => {
 */
   return (
     <div>
-      <button type="primary" onClick={Getuser}>Show User info.</button>
+      <button onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
     </div>
