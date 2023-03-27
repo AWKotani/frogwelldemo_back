@@ -1,5 +1,5 @@
-import liff from '@line/liff'
-function LoginPage() {
+import liff from "@line/liff"
+function Login() {
   const loginbuggon = async (e) => {
     console.log("logins_________")
     await liff.login();
@@ -10,4 +10,4 @@ function LoginPage() {
     </div>
   )
 }
-export default LoginPage;
+export default Login;
