@@ -1,9 +1,9 @@
-import React, { createContext, useState, useEffect} from "react"
-import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
-import liff from "@line/liff/dist/lib";
-import { Mainpage } from "./pages/main";
-import Login from "./pages/login";
-import "./main.css";
+import React, { createContext, useState, useEffect} from 'react'
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+import liff from '@line/liff/dist/lib';
+import { Mainpage } from './pages/main';
+import Login from './pages/login';
+import './main.css';
 
 export const Lineobject = createContext();
 
@@ -27,7 +27,7 @@ function App() {
           <div>
             {
                 <Routes>
-                  <Route path="/" element={<Mainpage />} />
+                  <Route path='/' element={<Mainpage />} />
                 </Routes>
             }
           </div>

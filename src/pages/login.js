@@ -1,7 +1,7 @@
-import liff from "@line/liff"
+import liff from '@line/liff'
 function Login() {
   const loginbuggon = async (e) => {
-    console.log("logins_________")
+    console.log('logins_________')
     await liff.login();
   }
   return (
