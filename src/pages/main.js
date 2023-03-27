@@ -10,7 +10,7 @@ export const Mainpage = (() => {
     console.log(user);
     setUserprofile(user);
   });
-//  const recs = '';
+/*  const recs = '';
 //  (async () => {
     const conn = new jsforce.Connection({
       oauth2 : {
@@ -29,7 +29,7 @@ export const Mainpage = (() => {
       LineUserId__c: 'U75bcd602fbd7da18d3974ac788bc7f00'
     });
 //  });
-
+*/
   return (
     <div>
       <button type="primary" onClick={Getuser}>Show User info.</button>
