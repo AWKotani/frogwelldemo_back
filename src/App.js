@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import liff from '@line/liff/dist/lib';
 import { Mainpage } from './pages/main';
 import Login from './pages/login';
-import './main.css';
 
 export const Lineobject = createContext();
 
