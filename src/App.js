@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect} from 'react'
+import React, { createContext, useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import liff from '@line/liff/dist/lib';
 import { Mainpage } from './pages/main';
