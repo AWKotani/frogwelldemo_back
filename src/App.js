@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import liff from '@line/liff/dist/lib';
 import { Mainpage } from './pages/main';
 import Login from './pages/login';
+import { sfObjectId } from './salesforce.js';
 
 export const Lineobject = createContext();
 
@@ -29,6 +30,7 @@ function App() {
                   <Route path="/" element={<Mainpage />} />
                 </Routes>
             }
+            <p>{sfObjectId()}</p>
           </div>
           </Router>
       </Lineobject.Provider>
