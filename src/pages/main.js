@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import 'antd/dist/reset.css';
+import { Button } from 'antd';
 import liff from '@line/liff/dist/lib';
 import jsforce from 'jsforce';
 
@@ -32,7 +33,7 @@ export const Mainpage = (() => {
 */
   return (
     <div>
-      <button onClick={Getuser}>Show User info.</button>
+      <button type="primary" onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
     </div>
