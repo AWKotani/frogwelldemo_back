@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import 'antd/dist/reset.css';
-import { Button } from 'antd';
+//import 'antd/dist/reset.css';
 import liff from '@line/liff/dist/lib';
 import jsforce from 'jsforce';
 
@@ -11,6 +10,13 @@ export const Mainpage = (() => {
     console.log(user);
     setUserprofile(user);
   });
+  return (
+    <div>
+      <button type="primary" onClick={Getuser}>Show User info.</button>
+      <p>userId:{Userprofile.userId}</p>
+      <p>displayName:{Userprofile.displayName}</p>
+    </div>
+  );
 /*  const recs = '';
 //  (async () => {
     const conn = new jsforce.Connection({
@@ -31,11 +37,4 @@ export const Mainpage = (() => {
     });
 //  });
 */
-  return (
-    <div>
-      <button type="primary" onClick={Getuser}>Show User info.</button>
-      <p>userId:{Userprofile.userId}</p>
-      <p>displayName:{Userprofile.displayName}</p>
-    </div>
-  );
 });
