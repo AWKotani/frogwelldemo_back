@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from 'react'
+import jsforce from 'jsforce';
 import 'antd/dist/reset.css';
 import liff from '@line/liff/dist/lib';
-//import jsforce from 'jsforce';
 
 export const Mainpage = (() => {
   const [Userprofile , setUserprofile] = useState('');
@@ -10,8 +10,8 @@ export const Mainpage = (() => {
     console.log(user);
     setUserprofile(user);
   });
-  const jsforce = require('jsforce');
-  require('dotenv').config();
+  //const jsforce = require('jsforce');
+  //require('dotenv').config();
 
   const conn = new jsforce.Connection({
     oauth2 : {
@@ -33,10 +33,9 @@ export const Mainpage = (() => {
 
   return (
     <div>
-      <button onClick={Getuser}>Show User info.</button>
+      <button onClick={Getuser}>Show User info.{recs.Id}</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
-      <p>salesforceId:{recs.Id}</p>
     </div>
   );
 });
