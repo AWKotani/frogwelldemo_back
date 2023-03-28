@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import liff from '@line/liff';
 import reportWebVitals from './reportWebVitals';
-import { Amplify } from 'aws-amplify';
+import { Amplify } from 'aws-amplify'; //Load Amplify Framework
 import config from './aws-exports'; //Load backend setting
 Amplify.configure(config); //Register backend setting to Amplify Framework 
 
