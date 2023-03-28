@@ -33,7 +33,7 @@ export const Mainpage = (() => {
 */
   return (
     <div>
-      <button onClick={Getuser}>Show User info.{recs.Id}</button>
+      <button onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
     </div>
