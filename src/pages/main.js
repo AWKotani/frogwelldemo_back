@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import 'antd/dist/reset.css';
 import liff from '@line/liff/dist/lib';
-import jsforce from 'jsforce';
+//import jsforce from 'jsforce';
 
 export const Mainpage = (() => {
   const [Userprofile , setUserprofile] = useState('');
