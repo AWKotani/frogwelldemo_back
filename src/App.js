@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import liff from '@line/liff/dist/lib';
 import { Mainpage } from './pages/main';
 import Login from './pages/login';
-import { sfObjectId } from './salesforce.js';
+import { sfObjectId } from './pages/salesforce.js';
 
 export const Lineobject = createContext();
 
