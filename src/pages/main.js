@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import jsforce from 'jsforce';
+//import jsforce from 'jsforce';
 import 'antd/dist/reset.css';
 import liff from '@line/liff/dist/lib';
 
@@ -12,7 +12,7 @@ export const Mainpage = (() => {
   });
   //const jsforce = require('jsforce');
   //require('dotenv').config();
-
+/*
   const conn = new jsforce.Connection({
     oauth2 : {
       loginUrl: 'https://test.salesforce.com',
@@ -30,7 +30,7 @@ export const Mainpage = (() => {
       LineUserId__c: 'U75bcd602fbd7da18d3974ac788bc7f00'
     });
 //  });
-
+*/
   return (
     <div>
       <button onClick={Getuser}>Show User info.{recs.Id}</button>
