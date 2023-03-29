@@ -1,7 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import jsforce from 'jsforce';
 
 export function sfObjectId() {
-//async()=>{
+async()=>{
   const conn = new jsforce.Connection({
     oauth2 : {
       loginUrl: 'https://test.salesforce.com',
@@ -18,7 +19,16 @@ export function sfObjectId() {
     const recs = conn.sobject('LINE_User__c').find({
       LineUserId__c: 'U75bcd602fbd7da18d3974ac788bc7f00'
     });
-    return recs.Id;
+  return (
+    <div>
+        <div>
+          <p>{recs.Id}</p>
+        </div>
+    </div>
+  )
 //};
 //  });
 }
+}
+
+export default sfObjectId;
