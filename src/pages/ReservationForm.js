@@ -18,7 +18,7 @@ const tailLayout = {
   },
 };
 
-const ReservationForm = () => {
+export const ReservationForm = (() => {
   const [form] = Form.useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -64,7 +64,6 @@ const ReservationForm = () => {
         <RangePicker
           showTime={{ format: 'HH:mm' }}
           format="YYYY-MM-DD HH:mm"
-          disabledDate={(current) => current && current < moment().endOf('day')}
         />
       </Form.Item>
 
@@ -91,6 +90,6 @@ const ReservationForm = () => {
       </Form.Item>
     </Form>
   );
-};
+});
 
-export default ReservationForm;
+// export default ReservationForm;

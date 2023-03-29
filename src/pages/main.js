@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import 'antd/dist/reset.css';
 import liff from '@line/liff/dist/lib';
+//import DeviceInfo from 'react-native-device-info';
+import { ReservationForm } from './ReservationForm';
 //import { sfObjectId } from './salesforce.js';
 
 export const Mainpage = (() => {
@@ -10,11 +12,13 @@ export const Mainpage = (() => {
     console.log(user);
     setUserprofile(user);
   });
+  
   return (
     <div>
       <button onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
+    {ReservationForm()}
     </div>
   );
 });

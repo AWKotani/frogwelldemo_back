@@ -14242,6 +14242,11 @@
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
 
+"react-native-device-info@^10.5.0":
+  "integrity" "sha512-o39xwi92aPDc8ZtlN0sX2ZJQGKv1BZqNgZZ9sSFDm25acQj2WD9G8/6KBcoQSqDROl9b2o44hahF4stWMAKtcw=="
+  "resolved" "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-10.5.0.tgz"
+  "version" "10.5.0"
+
 "react-native-get-random-values@^1.4.0":
   "integrity" "sha512-H/zghhun0T+UIJLmig3+ZuBCvF66rdbiWUfRSNS6kv5oDSpa1ZiVyvRWtuPesQpT8dXj+Bv7WJRQOUP+5TB1sA=="
   "resolved" "https://registry.npmjs.org/react-native-get-random-values/-/react-native-get-random-values-1.8.0.tgz"
@@ -14254,7 +14259,7 @@
   "resolved" "https://registry.npmjs.org/react-native-gradle-plugin/-/react-native-gradle-plugin-0.71.16.tgz"
   "version" "0.71.16"
 
-"react-native@>=0.56":
+"react-native@*", "react-native@^0.71.4", "react-native@>=0.56":
   "integrity" "sha512-3hSYqvWrOdKhpV3HpEKp1/CkWx8Sr/N/miCrmUIAsVTSJUR7JW0VvIsrV9urDhUj/s6v2WF4n7qIEEJsmTCrPw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.71.4.tgz"
   "version" "0.71.4"
