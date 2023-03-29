@@ -1,8 +1,8 @@
 import React, { createContext, useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import liff from '@line/liff/dist/lib';
-//import { Mainpage } from './pages/main';
-import { SalesforceData } from './pages/salesforce';
+import { Mainpage } from './pages/main';
+//import { SalesforceData } from './pages/salesforce';
 import Login from './pages/login';
 //import { sfObjectId } from './pages/salesforce.js';
 
@@ -28,7 +28,7 @@ function App() {
           <div>
             {
                 <Routes>
-                  <Route path="/" element={<SalesforceData />} />
+                  <Route path="/" element={<Mainpage />} />
                 </Routes>
             }
           </div>
