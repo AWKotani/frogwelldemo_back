@@ -1,7 +1,8 @@
 import React, { createContext, useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 import liff from '@line/liff/dist/lib';
-import { Mainpage } from './pages/main';
+//import { Mainpage } from './pages/main';
+import { Mainpage } from './pages/salesforce';
 import Login from './pages/login';
 //import { sfObjectId } from './pages/salesforce.js';
 
