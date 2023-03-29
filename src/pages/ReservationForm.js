@@ -44,7 +44,7 @@ const ReservationForm = () => {
         rules={[
           {
             required: true,
-            message: 'a名前を入力してください',
+            message: '名前を入力してください',
           },
         ]}
       >
