@@ -1,5 +1,6 @@
 import { Form, Input, DatePicker, TimePicker, Button } from 'antd';
 import { useState } from 'react';
+import "antd/dist/antd.css";
 
 const { RangePicker } = DatePicker;
 
@@ -44,7 +45,7 @@ export const ReservationForm = (() => {
         rules={[
           {
             required: true,
-            message: '名前を入力してください',
+            message: 'こたになおや',
           },
         ]}
       >

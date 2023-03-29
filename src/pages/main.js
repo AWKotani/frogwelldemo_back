@@ -18,6 +18,11 @@ export const Mainpage = (() => {
       <button onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
+      <p>Device Model:</p>
+      <p>Device Name: </p>
+      <p>Device Unique ID:</p>
+      <p>System Name: </p>
+      <p>System Version: </p>
     {ReservationForm()}
     </div>
   );
