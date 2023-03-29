@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import 'antd/dist/reset.css';
 import liff from '@line/liff/dist/lib';
-import { sfObjectId } from './salesforce.js';
-
-console.log(`Hello Debug`);
+//import { sfObjectId } from './salesforce.js';
 
 export const Mainpage = (() => {
   const [Userprofile , setUserprofile] = useState('');
@@ -14,7 +12,7 @@ export const Mainpage = (() => {
   });
   return (
     <div>
-      <button onClick={Getuser}>Show User info.{sfObjectId()}</button>
+      <button onClick={Getuser}>Show User info.</button>
       <p>userId:{Userprofile.userId}</p>
       <p>displayName:{Userprofile.displayName}</p>
     </div>
