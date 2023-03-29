@@ -7,7 +7,7 @@ export function sfObjectId() {
       loginUrl: 'https://test.salesforce.com',
       clinentId: '3MVG9aWdXtdHRrI33PiDvXP2NYIQhsXP0XFxoKwRvQZaCA8YO.AmL2bY9h6xMnzcKCbANo3tbvpX.4lMMwu63',
       clientSecret: 'A523BAFA65382BC2AD83D766DBA032053D0CEC077C8223DD92F945A029D6FF3C',
-      redirectUri: 'https://frogwell--techskill.sandbox.my.salesforce.com/oauth2/callback&response_type=code'
+      //redirectUri: 'https://frogwell--techskill.sandbox.my.salesforce.com/oauth2/callback&response_type=code'
     }
   });
     //await conn.login('api.user@frogwell.co.jp.techskill', 'frogwell20236h9WlVSOU9UDbhl5lt0CcBv3', function(err, userInfo) {
