@@ -1,24 +1,36 @@
-import jsforce from 'jsforce';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export function sfObjectId() {
-//async()=>{
-  const conn = new jsforce.Connection({
-    oauth2 : {
-      loginUrl: 'https://test.salesforce.com',
-      clinentId: '3MVG9aWdXtdHRrI33PiDvXP2NYIQhsXP0XFxoKwRvQZaCA8YO.AmL2bY9h6xMnzcKCbANo3tbvpX.4lMMwu63',
-      clientSecret: 'A523BAFA65382BC2AD83D766DBA032053D0CEC077C8223DD92F945A029D6FF3C',
-      //redirectUri: 'https://frogwell--techskill.sandbox.my.salesforce.com/oauth2/callback&response_type=code'
+const SalesforceData = () => {
+  const [accountData, setAccountData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const url = 'https://frogwell--techskill.sandbox.my.salesforce.com/services/data/v57.0/query/?q=SELECT+Name+FROM+LINE_User__c';
+      const token = 'Bearer 6Cel800D0p0000008gBV8880p0000005qUvwuw4gZ3ZNoEcAh6z0jSLXpyr8N3kO4TnvqLeKtt5ySbk5Yr54ocxWmwck638303FdpRKt0Rp';
+      const headers = {
+        'Authorization': token,
+        'Content-Type': 'application/json'
+      };
+      try {
+        const response = await axios.get(url, { headers: headers });
+        setAccountData(response.data.records);
+      } catch (error) {
+        console.error(error);
+      }
     }
-  });
-    //await conn.login('api.user@frogwell.co.jp.techskill', 'frogwell20236h9WlVSOU9UDbhl5lt0CcBv3', function(err, userInfo) {
-    conn.login('api.user@frogwell.co.jp.techskill', 'frogwell20236h9WlVSOU9UDbhl5lt0CcBv3', function(err, userInfo) {
-      if (err) { return console.error(err); }
-    });
-    //recs = await conn.sobject('LINE_User__c').find({
-    const recs = conn.sobject('LINE_User__c').find({
-      LineUserId__c: 'U75bcd602fbd7da18d3974ac788bc7f00'
-    });
-    return recs.Id;
-//};
-//  });
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      {accountData.map((account) => (
+        <div key={account.Id}>
+          <p>{account.Name}</p>
+        </div>
+      ))}
+    </div>
+  )
 }
+
+export default SalesforceData;
