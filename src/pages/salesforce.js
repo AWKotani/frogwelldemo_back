@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const SalesforceData = () => {
+export const SalesforceData = () => {
   const [accountData, setAccountData] = useState([]);
 
   useEffect(() => {
@@ -33,4 +33,4 @@ const SalesforceData = () => {
   )
 }
 
-export default SalesforceData;
+//export default SalesforceData;
