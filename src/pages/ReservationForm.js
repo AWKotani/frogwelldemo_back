@@ -1,6 +1,6 @@
 import { Form, Input, DatePicker, TimePicker, Button } from 'antd';
 import { useState } from 'react';
-import "antd/dist/antd.css";
+import 'antd/dist/reset.css';
 
 const { RangePicker } = DatePicker;
 
